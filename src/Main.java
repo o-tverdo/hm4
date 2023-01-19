@@ -69,14 +69,18 @@ public class Main {
 
     public static void task5() {
         System.out.println("Задача 5");
-        byte age = 17;
+        byte age = 7;
+        boolean adult = false;
         boolean baby = age < 5;
         boolean kid = age >= 5 && age < 14;
         boolean teenager = age >= 14 && age < 18;
+
         if (baby) {
             System.out.println("Если возраст ребенка равен " + age + ", то ему нельзя кататься на аттракционе");
-        } else if (kid) {
+        } else if (kid && adult == true) {
             System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе в сопровождении взрослого");
+        } else if (kid && adult != true) {
+            System.out.println("Если возраст ребенка равен " + age + " и взрослого нет, кататься нельзя") ;
         } else if (teenager) {
             System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе без сопровождения взрослого");
         } else {
